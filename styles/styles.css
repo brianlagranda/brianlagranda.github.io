@@ -43,3 +43,12 @@ h1 {
 span {
     padding-left: 10px;
 }
+
+.skew {
+    height: 70%;
+    width: 100%;
+    transform: translate(0, 15px) rotateX(180deg) skew(0deg, 20deg);
+    background-image: linear-gradient(225deg, #333333 0%, #444444 100%);
+    position: absolute;
+    z-index: -1;
+}
