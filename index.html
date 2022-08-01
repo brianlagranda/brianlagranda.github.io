@@ -36,36 +36,10 @@
             </nav>
         </div>
 
-        <!-- <div class="skew"></div> -->
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <div class="t-content">
-
-            <div class="title-container">
-                <h1 class="title">Hey I am</h1>
-            </div>
-            <div class="t-right">
-                <h1 class="title2">Brian.</h1>
-                <h2 class="subtitle">a web developer</h2>
-
-
-            </div>
+            <h1 class="title">Hey I am <span class="title2">Brian.</span></h1>
+            <h2 class="subtitle">a web developer</h2>
         </div>
-
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $(window).on('load resize', function (event) {
-                    var tRightWidth, tContent = $('.t-content');
-                    tRightWidth = Math.sqrt(Math.pow(tContent.width(), 2) + Math.pow(tContent.height(), 2));
-                    $('.t-right').css('width', tRightWidth);
-                    var angle = Math.atan(tContent.height() / tContent.width());
-                    angle = angle * 180 / Math.PI
-                    $('.t-right').css('transform', 'rotate(-' + angle + 'deg)');
-                });
-            });
-        </script>
-
-
 
     </header>
     <footer>
