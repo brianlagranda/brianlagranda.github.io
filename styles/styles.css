@@ -1,5 +1,20 @@
 @import './reset.css';
 
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/*               */
+/* Header navbar */
+/*               */
+
+header {
+    height: 92%;
+}
+
 .header-container {
     width: 100vw;
     display: flex;
@@ -9,8 +24,8 @@
 }
 
 .header-container-logo {
-    padding-left: 1rem;
-    height: 108%;
+    margin-left: 2rem;
+    height: 120%;
 }
 
 .navbar-container {
@@ -22,40 +37,47 @@
 
 .navbar-container-links {
     display: flex;
-    list-style: none;
 }
 
 .navbar-container-links li {
+    list-style: none;
     text-shadow: 0px 0px 4px #ffffff;
     padding: 0 16px;
 }
 
 .navbar-container-links a:hover {
-    color: #444444;
+    color: #111111;
 }
 
-/* Home */
+/*              */
+/* Header title */
+/*              */
+
+.title-container {
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-right-width: 0px;
+    border-left-width: 100vw;
+    border-bottom: 785px solid #000000;
+}
 
 h1 {
     position: absolute;
     width: 650px;
     top: 30%;
-    left: 35%;
+    left: 18%;
     height: 1em;
     font-size: 156px;
     font-weight: 400;
 }
 
-h1 span {
-    top: 500px;
-}
-
-.title {
+.title-container-text1 {
     color: #000000;
     text-shadow: -15px 4px 8px #222222;
 }
 
-.title2 {
+.title-container-text2 {
     margin-left: 4em;
     color: #FFFFFF;
     text-shadow: -10px 4px 4px #888888;
@@ -64,58 +86,26 @@ h1 span {
 .subtitle {
     position: absolute;
     width: 400px;
-    top: 55%;
-    left: 39.5%;
+    top: 67%;
+    left: 51%;
     height: 1em;
     font-size: 48px;
     font-weight: 400;
     color: #FFFFFF;
     text-shadow: -6px 3px 4px #888888;
-    margin-left: 10.5em;
 }
 
-.t-content {
-    width: 0;
-    height: 0;
-    border: 0 solid transparent;
-    border-right-width: 0px;
-    border-left-width: 100vw;
-    border-bottom: 1250px solid #000000;
-
-}
-
-/*
-.t-content {
-    width: 100%;
-    height: 100%;
-    display: block;
-    overflow: hidden;
-    background: #FFFFFF;
-    position: relative;
-}
-
-.t-right {
-    width: 100%;
-    height: 100%;
-    display: block;
-    overflow: hidden;
-    background: #222222;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transform-origin: top right;
-    transform: rotate(-50deg);
-    z-index: 1;
-}
-
-*/
+/*        */
+/* Footer */
+/*        */
 
 footer {
-    width: 100vw;
+    bottom: 0;
+    width: 100%;
     display: flex;
-    justify-content: flex-end;
-    background-color: #222222;
-    height: 70px;
+    justify-content: center;
+    background-color: #000000;
+    height: 8%;
 }
 
 footer ul li {
@@ -127,8 +117,11 @@ footer ul li a {
     margin-left: 4rem;
 }
 
+footer ul li a:hover {
+    color: #111111;
+}
+
 footer span {
     color: #FFFFFF;
     align-self: flex-end;
-
 }
