@@ -257,6 +257,10 @@ footer p {
     padding: 15px;
 }
 
+.resume-container p {
+    font-weight: bold;
+}
+
 .resume-container-skills i {
     font-size: 48px;
     margin: 0 20px;
