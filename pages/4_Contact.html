@@ -36,22 +36,21 @@
         </div>
     </header>
     <main>
-        <form>
+        <form action="">
             <fieldset>
-                <legend>Contact Me</legend>
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
-
-                <label for="phone">Cel.</label>
-                <input type="number" id="phone" name="phone" placeholder="Enter your phone number" required>
+                <input id="name" type="text" name="name" required />
 
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <input id="email" type="email" name="email" required />
 
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Enter your message"></textarea>
+                <label for="phone">Phone</label>
+                <input id="phone" type="tel" name="phone" required />
 
-                <input type="submit" value="Submit">
+                <label for=" message"> Any message?</label>
+                <textarea name="message" id="message" maxlength="400" placeholder="Enter your message..."></textarea>
+
+                <input type="submit" id="submit" value="Submit">
             </fieldset>
         </form>
     </main>
