@@ -36,7 +36,7 @@
         </div>
     </header>
     <main>
-        <form action="">
+        <form id="contactForm" action="">
             <fieldset>
                 <label for="name">Name</label>
                 <input id="name" type="text" name="name" required />
@@ -50,7 +50,8 @@
                 <label for=" message"> Any message?</label>
                 <textarea name="message" id="message" maxlength="400" placeholder="Enter your message..."></textarea>
 
-                <input type="submit" id="submit" value="Submit">
+                <button type="submit" form="contactForm" id="submit" value="Submit">Submit</button>
+
             </fieldset>
         </form>
     </main>
