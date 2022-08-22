@@ -17,9 +17,25 @@ html {
     overflow: hidden;
 }
 
+.body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header header"
+        "main main main main"
+        "footer footer footer footer";
+
+}
+
+
 /*                */
 /*     NAVBAR     */
 /*                */
+
+.header {
+    grid-area: header;
+}
 
 #navbarNav {
     justify-content: end;
@@ -35,6 +51,9 @@ html {
     height: 72px;
     width: 78px;
     margin-top: 5px;
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
 }
 
 .nav-link {
@@ -59,14 +78,18 @@ html {
         overflow: scroll;
     }
 
+    .main {
+        grid-area: main;
+    }
+
     .title-container {
         padding: 0px 10px;
         height: 70vh;
-        background-color: darkolivegreen;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(351deg, rgba(0, 0, 0, 1) 45%, rgba(255, 255, 255, 0.3981967787114846) 100%);
         display: grid;
-        grid-template-columns: 3fr 3fr;
-        grid-template-rows: 3fr 1fr 3fr;
-        grid-row: 2;
+        grid-template-rows: 5fr 1fr 3fr;
+
     }
 
     h1 {
@@ -77,8 +100,8 @@ html {
     .title-container-text1 {
         grid-column: 1;
         grid-row: 1;
-        justify-self: end;
         align-self: end;
+        text-align: center;
         color: #000000;
         text-shadow: -4px 1px 2px #222222;
     }
@@ -86,7 +109,7 @@ html {
     .title-container-text2 {
         grid-column: 2;
         grid-row: 2;
-        align-self: end;
+        text-align: center;
         color: #FFFFFF;
         text-shadow: -3px 1px 2px #888888;
     }
@@ -94,12 +117,72 @@ html {
     .subtitle {
         grid-column: 2;
         grid-row: 3;
-        font-size: 6vw;
+        font-size: 7vw;
         align-self: start;
+        color: #FFFFFF;
+        text-shadow: -3px 0px 2px #888888;
     }
 
 }
 
 /*                */
-/*      FOOTER    */
+/*     FOOTER     */
 /*                */
+
+@media screen and (max-width: 768px) {
+
+    footer {
+        grid-area: footer;
+        background-color: #000000;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+    }
+
+    footer ul {
+        margin-bottom: 10px;
+        margin-left: -40px;
+        align-self: end;
+    }
+
+    footer ul li i {
+        font-size: 28px;
+        color: #FFFFFF;
+        list-style: none;
+    }
+
+    footer ul li a:hover {
+        color: #FFFFFF;
+        text-shadow: 0px 0px 4px #FFFFFF;
+    }
+
+    footer p {
+        align-self: center;
+        color: #FFFFFF;
+    }
+
+}
+
+/*                */
+/*   ANIMATIONS   */
+/*                */
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotateY(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotateY(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+}
