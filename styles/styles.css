@@ -74,6 +74,8 @@ html {
     color: #FFFFFF;
     text-shadow: 0 0 15px rgba(255, 255, 255, .5), 0 0 10px rgba(255, 255, 255, .5);
     font-size: 28px;
+    transition: 1s linear;
+    transition-timing-function: linear;
 }
 
 .navbar-nav a:visited {
@@ -91,8 +93,7 @@ html {
 .title-container {
     padding: 0px 10px;
     height: 70vh;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(342deg, rgba(0, 0, 0, 1) 50%, rgba(255, 255, 255, 0.3981967787114846) 100%);
+    background: linear-gradient(342deg, rgba(0, 0, 0, 1) 50%, rgba(255, 255, 255, 0.4) 100%);
     display: grid;
     grid-template-rows: 5fr 1fr 3fr;
 
@@ -109,6 +110,7 @@ h1 {
     align-self: end;
     text-align: end;
     color: #000000;
+    animation: slidein 0.4s linear 1;
     text-shadow: -8px 2px 2px #222222;
 }
 
@@ -116,8 +118,6 @@ h1 {
     grid-column: 2;
     grid-row: 2;
     text-align: start;
-    color: #FFFFFF;
-    text-shadow: -8px 1px 2px #888888;
 }
 
 .subtitle {
@@ -125,9 +125,19 @@ h1 {
     grid-row: 3;
     font-size: 4vw;
     align-self: start;
-    color: #FFFFFF;
-    text-shadow: -5px 0px 2px #888888;
+    /* text-shadow: -5px 0px 2px #888888; */
 }
+
+.title-container-text2,
+.subtitle {
+    color: hsl(0, 0%, 28%);
+    background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 30%, hsl(0, 0%, 30%) 20%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: slidein2 0.2s linear 1, shine 2s infinite linear;
+    /*text-shadow: -8px 1px 2px #888888;*/
+}
+
 
 @media screen and (max-width: 768px) {
 
@@ -142,7 +152,6 @@ h1 {
         background: linear-gradient(351deg, rgba(0, 0, 0, 1) 45%, rgba(255, 255, 255, 0.3981967787114846) 100%);
         display: grid;
         grid-template-rows: 5fr 1fr 3fr;
-
     }
 
     h1 {
@@ -237,22 +246,41 @@ footer p {
     flex-direction: column;
     text-align: center;
     border-radius: 8px;
-    box-shadow: 0px 0px 8px 2px #000000;
+    box-shadow: 0px 0px 8px #000000;
 }
 
 .about-container-card h2 {
-    color: #000000;
+    color: transparent;
+    background-image: linear-gradient(to right, #FFFFFF, #FFFFFF, #FFFFFF, #000000, #000000);
+    -webkit-background-clip: text;
+    animation: animate 20s linear infinite;
+    background-size: 70%;
 }
 
 .about-container-card p {
     color: #FFFFFF;
+    text-shadow: 0 0 2px rgba(255, 255, 255, .5), 0 0 5px rgba(255, 255, 255, .5);
     font-weight: 500;
     padding: 1rem;
 }
 
 /*                */
+/*    PROJECTS    */
+/*                */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background: linear-gradient(342deg, rgba(0, 0, 0, 1) 50%, rgba(255, 255, 255, 0.4) 100%);
+}
+
+
+/*                */
 /*   ANIMATIONS   */
 /*                */
+
+/* LOGO SPIN 360° */
 
 @-moz-keyframes spin {
     100% {
@@ -270,5 +298,81 @@ footer p {
     100% {
         -webkit-transform: rotateY(360deg);
         transform: rotateY(360deg);
+    }
+}
+
+/* TEXT1 SPIN */
+
+@-moz-keyframes spinText {
+    100% {
+        -moz-transform: background-position(100px);
+    }
+}
+
+@-webkit-keyframes spinText {
+    100% {
+        -webkit-transform: background-position(100px);
+    }
+}
+
+@keyframes spinText {
+    100% {
+        -webkit-transform: background-position(100px);
+        transform: background-position(100px);
+    }
+}
+
+/* TEXT GRADIENT */
+
+@keyframes animate {
+    0% {
+        background-position: 0% 100%;
+    }
+
+    50% {
+        background-position: 100% 0%;
+    }
+
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+/* TEXT SHINE */
+
+@keyframes shine {
+    0% {
+        background-position: -200px;
+    }
+
+    60% {
+        background-position: 300px;
+    }
+
+    100% {
+        background-position: 600px;
+    }
+
+}
+
+/* MOVE TEXT */
+
+@keyframes slidein {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slidein2 {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0%);
     }
 }
