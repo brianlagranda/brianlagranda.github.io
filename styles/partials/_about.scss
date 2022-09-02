@@ -1,0 +1,42 @@
+.about-container {
+    display: flex;
+    justify-content: center;
+    padding: 35px;
+}
+
+.about-container-card {
+    padding: 10px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(342deg, rgba(0, 0, 0, 1) 50%, rgba(255, 255, 255, 0.3981967787114846) 100%);
+    grid-column: 2;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px #000000;
+}
+
+.about-container-card h2 {
+    color: transparent;
+    background-image: linear-gradient(to right, #FFFFFF, #FFFFFF, #FFFFFF, #000000, #000000);
+    -webkit-background-clip: text;
+    animation: animate 20s linear infinite;
+    background-size: 70%;
+}
+
+.about-container-card p {
+    color: #FFFFFF;
+    text-shadow: 0 0 2px rgba(255, 255, 255, .5), 0 0 5px rgba(255, 255, 255, .5);
+    font-weight: 500;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .about-container-card {
+        width: 100%;
+    }
+
+}

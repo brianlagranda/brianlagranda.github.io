@@ -1,0 +1,96 @@
+/* LOGO SPIN 360° */
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotateY(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotateY(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+}
+
+/* TEXT1 SPIN */
+
+@-moz-keyframes spinText {
+    100% {
+        -moz-transform: background-position(100px);
+    }
+}
+
+@-webkit-keyframes spinText {
+    100% {
+        -webkit-transform: background-position(100px);
+    }
+}
+
+@keyframes spinText {
+    100% {
+        -webkit-transform: background-position(100px);
+        transform: background-position(100px);
+    }
+}
+
+/* TEXT GRADIENT */
+
+@keyframes animate {
+    0% {
+        background-position: 0% 100%;
+    }
+
+    50% {
+        background-position: 100% 0%;
+    }
+
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+/* TEXT SHINE */
+
+@keyframes shine {
+    0% {
+        background-position: -200px;
+    }
+
+    60% {
+        background-position: 300px;
+    }
+
+    100% {
+        background-position: 600px;
+    }
+
+}
+
+/* MOVE TEXT */
+
+@keyframes slidein {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slidein2 {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
