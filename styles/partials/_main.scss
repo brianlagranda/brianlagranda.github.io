@@ -2,33 +2,33 @@
     grid-area: main;
 }
 
+h1 {
+    font-size: 10vw;
+    cursor: default;
+}
+
 .title-container {
     padding: 0px 10px;
     height: 70vh;
     display: grid;
     grid-template-rows: 5fr 1fr 3fr;
 
-}
+    &-text1 {
+        grid-column: 1;
+        grid-row: 1;
+        align-self: end;
+        text-align: end;
+        color: #000000;
+        animation: slidein 0.4s linear 1;
+        text-shadow: -8px 2px 2px #222222;
+    }
 
-h1 {
-    font-size: 10vw;
-    cursor: default;
-}
+    &-text2 {
+        grid-column: 2;
+        grid-row: 2;
+        text-align: start;
+    }
 
-.title-container-text1 {
-    grid-column: 1;
-    grid-row: 1;
-    align-self: end;
-    text-align: end;
-    color: #000000;
-    animation: slidein 0.4s linear 1;
-    text-shadow: -8px 2px 2px #222222;
-}
-
-.title-container-text2 {
-    grid-column: 2;
-    grid-row: 2;
-    text-align: start;
 }
 
 .subtitle {
@@ -53,32 +53,32 @@ h1 {
         background: linear-gradient(351deg, rgba(0, 0, 0, 1) 45%, rgba(255, 255, 255, 0.3981967787114846) 100%);
     }
 
-    .title-container {
-        padding: 0px 10px;
-        height: 70vh;
-        display: grid;
-        grid-template-rows: 5fr 1fr 3fr;
-    }
-
     h1 {
         font-size: 18vw;
         cursor: default;
     }
 
-    .title-container-text1 {
-        grid-column: 1;
-        grid-row: 1;
-        align-self: end;
-        text-align: center;
-        color: #000000;
-        text-shadow: -4px 1px 2px #222222;
-    }
+    .title-container {
+        padding: 0px 10px;
+        height: 70vh;
+        display: grid;
+        grid-template-rows: 5fr 1fr 3fr;
 
-    .title-container-text2 {
-        grid-column: 2;
-        grid-row: 2;
-        text-align: center;
-        color: #FFFFFF;
+        &-text1 {
+            grid-column: 1;
+            grid-row: 1;
+            align-self: end;
+            text-align: center;
+            color: #000000;
+            text-shadow: -4px 1px 2px #222222;
+        }
+
+        &-text2 {
+            grid-column: 2;
+            grid-row: 2;
+            text-align: center;
+            color: #FFFFFF;
+        }
     }
 
     .subtitle {
@@ -88,5 +88,4 @@ h1 {
         align-self: start;
         color: #FFFFFF;
     }
-
 }
