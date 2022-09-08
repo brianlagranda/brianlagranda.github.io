@@ -1,6 +1,6 @@
 footer {
     grid-area: footer;
-    background-color: #000000;
+    background-color: map-get($colors, primaryColor);
     text-align: center;
     display: grid;
     grid-template-columns: 1fr;
@@ -9,7 +9,7 @@ footer {
 
     & p {
         align-self: center;
-        color: #FFFFFF;
+        color: map-get($colors, secondaryColor);
     }
 
     & ul {
@@ -21,11 +21,11 @@ footer {
         & li a {
             font-family: 'roboto', sans-serif;
             font-size: 28px;
-            color: #FFFFFF;
+            color: map-get($colors, secondaryColor);
             text-decoration: none;
 
             &:hover {
-                color: #FFFFFF;
+                color: map-get($colors, secondaryColor);
                 text-shadow: 0 0 15px rgba(255, 255, 255, .5), 0 0 10px rgba(255, 255, 255, .5);
             }
         }

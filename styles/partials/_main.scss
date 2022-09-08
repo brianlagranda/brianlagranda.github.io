@@ -7,6 +7,14 @@ h1 {
     cursor: default;
 }
 
+.secondaryText {
+    color: hsl(0, 0%, 28%);
+    background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 30%, hsl(0, 0%, 30%) 20%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: slidein2 0.2s linear 1, shine 2s infinite linear;
+}
+
 .title-container {
     padding: 0px 10px;
     height: 70vh;
@@ -18,12 +26,13 @@ h1 {
         grid-row: 1;
         align-self: end;
         text-align: end;
-        color: #000000;
+        color: map-get($colors, primaryColor);
         animation: slidein 0.4s linear 1;
         text-shadow: -8px 2px 2px #222222;
     }
 
     &-text2 {
+        @extend .secondaryText;
         grid-column: 2;
         grid-row: 2;
         text-align: start;
@@ -32,19 +41,11 @@ h1 {
 }
 
 .subtitle {
+    @extend .secondaryText;
     grid-column: 2;
     grid-row: 3;
     font-size: 4vw;
     align-self: start;
-}
-
-.title-container-text2,
-.subtitle {
-    color: hsl(0, 0%, 28%);
-    background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 30%, hsl(0, 0%, 30%) 20%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: slidein2 0.2s linear 1, shine 2s infinite linear;
 }
 
 
@@ -69,7 +70,7 @@ h1 {
             grid-row: 1;
             align-self: end;
             text-align: center;
-            color: #000000;
+            color: map-get($colors, primaryColor);
             text-shadow: -4px 1px 2px #222222;
         }
 
@@ -77,7 +78,7 @@ h1 {
             grid-column: 2;
             grid-row: 2;
             text-align: center;
-            color: #FFFFFF;
+            color: map-get($colors, secondaryColor);
         }
     }
 
@@ -86,6 +87,6 @@ h1 {
         grid-row: 3;
         font-size: 7vw;
         align-self: start;
-        color: #FFFFFF;
+        color: map-get($colors, secondaryColor);
     }
 }

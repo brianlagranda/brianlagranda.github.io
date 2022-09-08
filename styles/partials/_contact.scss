@@ -19,9 +19,9 @@ fieldset {
         padding-top: 8px;
         margin-bottom: 50px;
         font-size: 1em;
-        color: #fff;
+        color: map-get($colors, secondaryColor);
         border: none;
-        border-bottom: 1px solid #FFFFFF;
+        border-bottom: 1px solid map-get($colors, secondaryColor);
         outline: none;
         background: transparent;
     }
@@ -46,13 +46,11 @@ fieldset {
 }
 
 #submit {
+    @include botones(transparent, #FFFFFF, #FFFFFF);
     min-width: 100px;
     width: 20%;
     height: 50px;
-    background-color: transparent;
     border-radius: 10px;
-    border: 2px solid #FFFFFF;
-    color: #FFFFFF;
     font-size: 20px;
     font-weight: bold;
     letter-spacing: 2px;
