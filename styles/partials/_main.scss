@@ -8,11 +8,11 @@ h1 {
 }
 
 .secondaryText {
-    color: hsl(0, 0%, 28%);
-    background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 30%, hsl(0, 0%, 30%) 20%);
+    color: hsl(0, 0%, 57%);
+    background: linear-gradient(to right, hsl(0, 0%, 72%) 0, hsl(0, 0%, 100%) 30%, hsl(0, 0%, 69%) 20%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: slidein2 0.2s linear 1, shine 2s infinite linear;
+    animation: slidein2 0.5s linear 1, shine 1s infinite linear;
 }
 
 .title-container {
@@ -27,7 +27,7 @@ h1 {
         align-self: end;
         text-align: end;
         color: map-get($colors, primaryColor);
-        animation: slidein 0.4s linear 1;
+        animation: slidein 0.5s linear 1;
         text-shadow: -8px 2px 2px #222222;
     }
 
@@ -36,6 +36,7 @@ h1 {
         grid-column: 2;
         grid-row: 2;
         text-align: start;
+        text-shadow: 6px 0px 2px #FFFFFF;
     }
 
 }
@@ -46,8 +47,8 @@ h1 {
     grid-row: 3;
     font-size: 4vw;
     align-self: start;
+    text-shadow: 3px 0px 2px #FFFFFF;
 }
-
 
 @media screen and (max-width: 768px) {
     .main {
@@ -55,15 +56,15 @@ h1 {
     }
 
     h1 {
-        font-size: 18vw;
+        font-size: 14vw;
         cursor: default;
     }
 
     .title-container {
         padding: 0px 10px;
-        height: 70vh;
+        height: 100vh;
         display: grid;
-        grid-template-rows: 5fr 1fr 3fr;
+        grid-template-rows: 8fr 1fr 3fr;
 
         &-text1 {
             grid-column: 1;
@@ -79,6 +80,7 @@ h1 {
             grid-row: 2;
             text-align: center;
             color: map-get($colors, secondaryColor);
+            text-shadow: 5px 0px 2px #FFFFFF;
         }
     }
 
@@ -88,5 +90,51 @@ h1 {
         font-size: 7vw;
         align-self: start;
         color: map-get($colors, secondaryColor);
+        text-shadow: 2px 0px 2px #FFFFFF;
     }
+}
+
+@media screen and (max-width: 420px) {
+
+    h1 {
+        font-size: 22vw;
+    }
+
+    .main {
+        background: linear-gradient(325deg, rgba(0, 0, 0, 1) 45%, rgba(255, 255, 255, 0.3981967787114846) 100%);
+    }
+
+    .title-container {
+        padding: 0px 5px;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 5fr 1fr 2fr;
+
+        &-text1 {
+            grid-column: 1;
+            grid-row: 1;
+            align-self: end;
+            text-align: center;
+            color: map-get($colors, primaryColor);
+            text-shadow: -4px 1px 2px #222222;
+        }
+
+        &-text2 {
+            grid-column: 2;
+            grid-row: 2;
+            text-align: center;
+            color: map-get($colors, secondaryColor);
+            text-shadow: 5px 0px 2px #FFFFFF;
+        }
+    }
+
+    .subtitle {
+        grid-column: 2;
+        grid-row: 3;
+        font-size: 7vw;
+        align-self: start;
+        color: map-get($colors, secondaryColor);
+        text-shadow: 1px 0px 2px #FFFFFF;
+    }
+
 }
