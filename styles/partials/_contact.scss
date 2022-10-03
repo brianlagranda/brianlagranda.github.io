@@ -4,7 +4,8 @@ fieldset {
     padding: 30px;
     margin: 60px auto;
     background-color: #666666;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 1);
+    border: none;
+    box-shadow: 00px 00px 08px 05px map-get($colors, secondaryColor);
     border-radius: 10px;
 
     & p {
@@ -46,15 +47,25 @@ fieldset {
 }
 
 #submit {
-    @include botones(transparent, #FFFFFF, #FFFFFF);
-    min-width: 100px;
-    width: 20%;
-    height: 50px;
-    border-radius: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    @include botones(#666666, #FFFFFF, #FFFFFF);
+    font-family: Roboto, sans-serif;
+    font-size: 1em;
+    background-color: #666666;
+    padding: 10px 30px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+    border-radius: 50px;
+    transition: 1000ms;
+    transform: translateY(0);
     cursor: pointer;
+
+    &:hover {
+        transition: 1000ms;
+        padding: 10px 50px;
+        transform: translateY(-0px);
+        background-color: #666666;
+        color: #ffffff;
+        border: solid 2px #ffffff;
+    }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1200px) {

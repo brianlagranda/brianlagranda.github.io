@@ -21,6 +21,7 @@
             color: transparent;
             background-image: linear-gradient(to right, #FFFFFF, #FFFFFF, #FFFFFF, #000000, #000000);
             -webkit-background-clip: text;
+            background-clip: text;
             animation: animate 20s linear infinite;
             background-size: 70%;
         }

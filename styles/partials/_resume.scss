@@ -10,11 +10,13 @@
     padding: 20px;
 
     & h2 {
-        color: transparent;
-        background-image: linear-gradient(to left, #FFFFFF, #FFFFFF, #FFFFFF, #000000, #000000);
+        background: linear-gradient(to right, #FFFFFF 20%, #000000 40%, #000000 60%, #000000 80%);
+        background-size: 200% auto;
+        color: #000;
+        background-clip: text;
         -webkit-background-clip: text;
-        animation: animate 10s linear infinite;
-        background-size: 40%;
+        -webkit-text-fill-color: transparent;
+        animation: shine2 2s linear infinite;
         padding: 15px;
     }
 

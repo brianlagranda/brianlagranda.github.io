@@ -123,3 +123,9 @@
         transform: translateX(0%);
     }
 }
+
+@keyframes shine2 {
+    to {
+        background-position: 200% center;
+    }
+}

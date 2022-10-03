@@ -8,11 +8,13 @@ h1 {
 }
 
 .secondaryText {
-    color: hsl(0, 0%, 57%);
-    background: linear-gradient(to right, hsl(0, 0%, 72%) 0, hsl(0, 0%, 100%) 30%, hsl(0, 0%, 69%) 20%);
+    background: linear-gradient(to right, #FFF 20%, #000000 40%, #000000 60%, #FFF 80%);
+    background-size: 200% auto;
+    color: map-get($colors, primaryColor);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: slidein2 0.5s linear 1, shine 1s infinite linear;
+    animation: slidein2 0.5s linear 1, shine2 3s linear infinite;
 }
 
 .title-container {
@@ -28,7 +30,7 @@ h1 {
         text-align: end;
         color: map-get($colors, primaryColor);
         animation: slidein 0.5s linear 1;
-        text-shadow: -8px 2px 2px #222222;
+        text-shadow: -8px 2px 2px #333333;
     }
 
     &-text2 {
@@ -36,7 +38,7 @@ h1 {
         grid-column: 2;
         grid-row: 2;
         text-align: start;
-        text-shadow: 6px 0px 2px #FFFFFF;
+        text-shadow: 8px 1px 2px #FFFFFF;
     }
 
 }
@@ -47,7 +49,8 @@ h1 {
     grid-row: 3;
     font-size: 4vw;
     align-self: start;
-    text-shadow: 3px 0px 2px #FFFFFF;
+    text-shadow: 3px 1px 2px #FFFFFF;
+
 }
 
 @media screen and (max-width: 768px) {
@@ -80,7 +83,7 @@ h1 {
             grid-row: 2;
             text-align: center;
             color: map-get($colors, secondaryColor);
-            text-shadow: 5px 0px 2px #FFFFFF;
+            text-shadow: 5px 1px 2px #FFFFFF;
         }
     }
 
@@ -90,7 +93,7 @@ h1 {
         font-size: 7vw;
         align-self: start;
         color: map-get($colors, secondaryColor);
-        text-shadow: 2px 0px 2px #FFFFFF;
+        text-shadow: 3px 1px 2px #FFFFFF;
     }
 }
 
@@ -108,7 +111,7 @@ h1 {
         padding: 0px 5px;
         height: 100vh;
         display: grid;
-        grid-template-rows: 5fr 1fr 2fr;
+        grid-template-rows: 4fr 1fr 2fr;
 
         &-text1 {
             grid-column: 1;
@@ -124,7 +127,7 @@ h1 {
             grid-row: 2;
             text-align: center;
             color: map-get($colors, secondaryColor);
-            text-shadow: 5px 0px 2px #FFFFFF;
+            text-shadow: 4px 1px 2px #FFFFFF;
         }
     }
 
